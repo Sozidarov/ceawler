@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceawler - Your Ultimate Search Tool</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background: #0d1117;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #ff6200, #ff8c00);
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            color: #fff;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            background: #161b22;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #ff6200;
+        }
+
+        nav a {
+            color: #ff8c00;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #ff6200;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #c9d1d9;
+            margin-bottom: 1rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: #161b22;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #ff6200;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(255, 98, 0, 0.3);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: #ff8c00;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Button */
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #ff6200;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #e65a00;
+        }
+
+        /* Footer */
+        footer {
+            background: #161b22;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid #ff6200;
+        }
+
+        footer p {
+            color: #8b949e;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ff8c00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ceawler</h1>
+        <p>Your ultimate tool for searching across platforms and beyond.</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#get-started">Get Started</a>
+        <a href="https://github.com/ваш_ник/ceawler">GitHub</a>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Ceawler</h2>
+            <p>Ceawler is a powerful open-source tool designed to help you gather information effortlessly. Whether you're searching by username, email, phone number, or a custom query, Ceawler leverages APIs like DaData and Google Custom Search to deliver fast, reliable results.</p>
+            <p>Inspired by modern tools like GitHub Copilot, Ceawler combines a sleek interface with robust functionality, making it a must-have for developers, researchers, and enthusiasts.</p>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Username Search</h3>
+                    <p>Scan platforms like GitHub, Instagram, and Twitter for a given username.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Email Lookup</h3>
+                    <p>Check email presence across services like HaveIBeenPwned and Gravatar.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Phone Verification</h3>
+                    <p>Validate phone numbers and get detailed info using DaData API.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Browser Search</h3>
+                    <p>Search the web with custom queries via Google Custom Search.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-started">
+            <h2>Get Started</h2>
+            <p>Ready to explore Ceawler? Clone the repository, set up your API keys, and start searching!</p>
+            <pre style="background: #161b22; padding: 1rem; border-radius: 6px; color: #ff8c00;">
+git clone https://github.com/ваш_ник/ceawler.git
+cd ceawler
+pip install -r requirements.txt
+            </pre>
+            <p>Create a <code>config.py</code> file with your API keys and run:</p>
+            <pre style="background: #161b22; padding: 1rem; border-radius: 6px; color: #ff8c00;">
+python main.py --phone "+79270000000"
+            </pre>
+            <a href="https://github.com/ваш_ник/ceawler" class="cta-button">Visit GitHub</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>Built by <a href="https://t.me/ceawler">@ceawler</a> | <a href="https://github.com/ваш_ник/ceawler">Source Code</a></p>
+        <p>&copy; 2025 Ceawler. All rights reserved.</p>
+    </footer>
+</body>
+</html>
